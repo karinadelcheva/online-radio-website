@@ -1,0 +1,34 @@
+@import './components/header/Header.scss';
+@import '/src/App.scss';
+@import './components/dashboard/Dashboard.scss';
+
+@font-face {
+  font-family: "Magilio";
+  src: font-url("./assets/font/MagilioRegular-8Mxvg.otf") format("otf"),
+    font-url("./assets/font/MagilioRegular-Yzv2O.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: black;
+  font-family: Times New Roman;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+h1, h2, h3 {
+  font-family: Magilio;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header {
+  position: absolute;
+  height: 60px;
+}
