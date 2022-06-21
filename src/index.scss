@@ -1,6 +1,7 @@
 @import './components/header/Header.scss';
 @import '/src/App.scss';
 @import './components/dashboard/Dashboard.scss';
+@import './components/artists/ArtistsList.scss';
 
 @font-face {
   font-family: "Magilio";
@@ -28,7 +29,97 @@ code {
     monospace;
 }
 
-header {
+// 
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pad-bottom {
+  padding-bottom: 60px;
+}
+
+.biryani {
+  font-family: 'Biryani', sans-serif;
+}
+
+.biryani-black {
+  font-family: 'Biryani', sans-serif;
+  font-weight: 900;
+}
+
+.anton {
+  font-family: 'Anton', sans-serif;
+}
+
+.bg-featured {
+  background-image: url('../src/assets/featured-mix.jpg');
+}
+
+.mix-title {
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background-image: url('../src/assets/play-button.svg');
+}
+
+.playing .play-button {
+  background-image: url('../src/assets/pause-button.svg');
+}
+
+.archive .play-button {
+  width: 36px;
+  height: 36px;
+}
+
+.mixes .play-button {
+  width: 48px;
+  height: 48px;
+}
+
+.button {
+  border: none;
+  outline: none;
+}
+
+.mixes {
+  padding-bottom: 5rem;
+}
+
+.mix {
+  width: calc(50% - 1rem);
+}
+
+.mix:nth-of-type(even) {
+  transform: translateY(4rem);
+}
+
+.nav-link {
+  border-bottom: solid 3px rgba(0, 0, 0, 0);
+}
+
+.nav-link.active {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+.player {
+  z-index: 10;
+}
+
+.mix-overlay:after {
+  content: '';
   position: absolute;
-  height: 60px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
